@@ -1,0 +1,39 @@
+<body class="fstyle">
+    <form [formGroup]="regForm">
+        <h2>{{title}}</h2>
+        <div class="col1">
+            <div>
+                <mat-form-field appearance="fill" class="fieldWidth">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" required>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill" class="fieldWidth">
+                    <mat-label>Age</mat-label>
+                    <input matInput formControlName="age" required>
+                </mat-form-field>
+            </div>
+        </div>
+            <div>
+                <mat-form-field appearance="fill" class="fieldWidth">
+                    <mat-label>Color</mat-label>
+                    <mat-select disableRipple formControlName="color" required>
+                      <mat-option value="Red">Red</mat-option>
+                      <mat-option value="Blue">Blue</mat-option>
+                      <mat-option value="Green">Green</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+
+
+        <div class="row">
+            <div class="button">
+                <button *ngIf="!updateActive" mat-fab extended color="primary" type="submit" (click)="onSubmit()">Submit</button>
+        <span> <button *ngIf="updateActive" mat-fab extended color="warn" type="submit" routerLink="/admin" style="margin-right: 20px;">Cancel</button> 
+        <button *ngIf="updateActive" mat-fab extended color="primary" type="submit" (click)="update()">Update</button></span>
+            </div>
+        </div>
+
+    </form>
+</body>
