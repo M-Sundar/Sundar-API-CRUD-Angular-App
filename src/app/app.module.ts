@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { DialogBoxComponent } from './dialog-box/dialog-box.component';
     LoginComponent,
     RegistrationFormComponent,
     AdminComponent,
-    DialogBoxComponent
+    DialogBoxComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

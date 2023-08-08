@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { AdminComponent } from './admin/admin.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
     path: 'regform/:id',
     component: RegistrationFormComponent
   },
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  }
 ];
 
 @NgModule({
