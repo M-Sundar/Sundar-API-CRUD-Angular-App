@@ -9,6 +9,5 @@ Go to "https://crudcrud.com/" > click on "Check Endpoint Information" button > c
 - Routing
 - ngOnIt
 - Angular Material
-- Pipe
 - Directive
 - String interpolation
