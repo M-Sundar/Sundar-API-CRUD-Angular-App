@@ -4,7 +4,7 @@ Go to "https://crudcrud.com/" > click on "Check Endpoint Information" button > c
 **Topics Covered in this CRUD opertion**:
 - Reactive forms
 - Services
-- HTTP Interceptors (Used API to fetch the data)
+- HTTP Interceptors (Used API in this project)
 - Observables
 - Routing
 - ngOnIt
