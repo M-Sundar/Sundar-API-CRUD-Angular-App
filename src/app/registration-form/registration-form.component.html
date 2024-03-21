@@ -30,7 +30,7 @@
         <div class="row">
             <div class="button">
                 <button *ngIf="!updateActive" mat-fab extended color="primary" type="submit" (click)="onSubmit()">Submit</button>
-        <span> <button *ngIf="updateActive" mat-fab extended color="warn" type="submit" routerLink="/admin" style="margin-right: 20px;">Cancel</button> 
+        <span> <button *ngIf="updateActive" mat-fab extended color="warn" routerLink="/admin" style="margin-right: 20px;">Cancel</button> 
         <button *ngIf="updateActive" mat-fab extended color="primary" type="submit" (click)="update()">Update</button></span>
             </div>
         </div>

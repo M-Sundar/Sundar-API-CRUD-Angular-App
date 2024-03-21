@@ -13,7 +13,7 @@ export class RegistrationFormComponent implements OnInit {
 
   title = "Registration Form";
   hide = true;
-  panelColor = new FormControl('red');
+  //panelColor = new FormControl('red');
   public userIdtoUpdate!: number;
   public updateActive: boolean = false;
 
@@ -22,7 +22,7 @@ export class RegistrationFormComponent implements OnInit {
   constructor(private rf: FormBuilder, private empservice: EmployeeService, private activeRoute: ActivatedRoute, private route: Router){
     this.regForm = this.rf.group({
       name: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z ]*')]),
-      age: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(3)]),
+      age: new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(2), Validators.pattern('[0-9]*')]),
       color: new FormControl('', [Validators.required]),
     })
   }
@@ -53,7 +53,7 @@ export class RegistrationFormComponent implements OnInit {
       .subscribe(res => {
         this.route.navigate(['admin']);
         this.empservice.openSnackBar('Employee updated successfully');
-        this.regForm.reset();
+        //this.regForm.reset();
       });
   }
 

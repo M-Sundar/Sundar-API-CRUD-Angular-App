@@ -16,23 +16,23 @@ export class EmployeeService {
   constructor(private http: HttpClient, private snackbar: MatSnackBar, private dialog: MatDialog) { }
 
   addEmployee(data: any): Observable<any> {
-    return this.http.post('https://crudcrud.com/api/a3e17a8a03b542e0ac05bdf939a01785/resource/', data);
+    return this.http.post('https://crudcrud.com/api/eafc08ff35054e689eb3cf767f0fed63/resource/', data);
    }
 
    getEmployee(): Observable<any>{
-    return this.http.get('https://crudcrud.com/api/a3e17a8a03b542e0ac05bdf939a01785/resource/');
+    return this.http.get('https://crudcrud.com/api/eafc08ff35054e689eb3cf767f0fed63/resource/');
    }
 
    delete(id: any): Observable<any>{
-    return this.http.delete(`https://crudcrud.com/api/a3e17a8a03b542e0ac05bdf939a01785/resource/${id}`);
+    return this.http.delete(`https://crudcrud.com/api/eafc08ff35054e689eb3cf767f0fed63/resource/${id}`);
    }
 
    update(data: UserProfile, id: number): Observable<any>{
-    return this.http.put<UserProfile>(`https://crudcrud.com/api/a3e17a8a03b542e0ac05bdf939a01785/resource/${id}`, data);
+    return this.http.put<UserProfile>(`https://crudcrud.com/api/eafc08ff35054e689eb3cf767f0fed63/resource/${id}`, data);
    }
 
    getUserId(id: any){
-    return this.http.get<UserProfile>(`https://crudcrud.com/api/a3e17a8a03b542e0ac05bdf939a01785/resource/${id}`);
+    return this.http.get<UserProfile>(`https://crudcrud.com/api/eafc08ff35054e689eb3cf767f0fed63/resource/${id}`);
    }
 
    openSnackBar(msg: string, action: string = 'Ok'){
@@ -45,8 +45,8 @@ export class EmployeeService {
    openConfirm(msg: any){
     return this.dialog.open(DialogBoxComponent, {
       width: '300px',
-      panelClass: 'confirm-dialog-container',
-      disableClose: true,
+      //panelClass: 'confirm-dialog-container',
+      //disableClose: true,
       position: {top: '10px'},
       data: {
         message: msg
